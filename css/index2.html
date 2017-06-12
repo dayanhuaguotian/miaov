@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--
+			1、定位的使用
+			2、层级的理解和应用
+			3、导航练习，当hover的时候需要有变化
+			4、相对定位和绝对定位的配合使用
+			5、透明度的配合使用
+		-->
+		<style>
+			#box{
+				position: relative;
+				
+			}
+			#box div{
+				width: 99px;
+				height: 38px;
+				border: 1px solid #e7788d;
+				position: absolute;
+				top: -2px;
+				background: #fdf1f4;
+				text-align: center;
+				line-height: 38px;
+				border-bottom: 2px solid  red;
+
+			}
+			#box div:hover {
+				width: 98px;
+				background: none;
+				border-bottom:none;
+				border-top:2px solid red;
+				border-left: 2px solid red;
+				border-right: 2px solid red;
+				z-index: 2;
+			}
+			.div1{
+				left: 0;
+			}
+			.div2{
+				left: 100px;
+				
+			}
+			.div3{
+				left: 200px;
+			}
+			.div4{
+				left: 300px;
+			}
+			#box .div5{
+				left: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="div1">妙味</div>
+			<div class="div2">nihao</div>
+			<div class="div3">欢迎</div>
+			<div class="div4">大家</div>
+			<div class="div5">妙味</div>
+		</div>
+	</body>
+</html>
