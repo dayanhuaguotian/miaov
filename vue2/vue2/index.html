@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<div id="app">
+<header>
+<h2>购物车</h2>
+<p><span class="width4">商品信息</span><span>商品金额</span><span>商品数量</span><span>总金额</span><span>编辑</span></p>
+</header>
+<main >
+	<ul>
+		<li class="clear" v-for="item in productList">		
+			<div class="width4 left">
+			    <span  class=" left check " :class="{'active':item.checked}" @click="chose(item)"></span>
+				<img src="img/goods-2.jpg" alt="" class="left">
+				<h2 >{{item.productName}}</h2>
+				<p >赠送：<br/><span v-for="parts in item.parts">{{parts.parsName}}<br/></span></p>	
+			</div>
+			<span class="width15 left textcent linheight">{{item.productPrice | formatMoney}}</span>
+			<p class="width15 left textcent linheight"><button @click="changenum(item,-1)">-</button><input type="text"  disabled v-model="item.productQuentity"><button @click="changenum(item,+1)">+</button></p>	
+			<span class="width15 left textcent linheight">{{item.productPrice*item.productQuentity | money('元')}}</span>
+			<span class="width15 left textcent linheight red" @click="deleconfirm">删除</span>				
+			
+		</li>
+	</ul>
+	<div :class="{'zhezhao':onff}"></div>
+	<div class="wrap" :class="{'show':onff}" >
+		<h2>确认删除？</h2>
+		<span @click="deleproduct">确认</span>
+		<span @click="onff=false">取消</span>
+	</div>	
+</main>
+<footer>
+	<p>
+		<span :class="{'red':checkedAll}" @click="checkedAllF(true)">全选</span>
+		<span  @click="checkedAllF(false)">取消全选</span>
+		<span class="right" id="pay">去支付 </span>
+		<span class="right" >总金额：{{totalMoney | formatMoney}} </span>
+	</p>	
+</footer>
+</div>
+</body>
+<script type="text/javascript" src='js/vue.js'></script>
+<script type="text/javascript" src='js/index.js'></script>
+</html>

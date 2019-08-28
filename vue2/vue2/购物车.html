@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body >
+<div id="app">
+
+<div v-for="item in productList">
+	<span :class="{'red':item.checked}" @click="chose(item)">选中为红色</span>
+	<span>{{item.productPrice | formatMoney}}</span>  <span @click="changenum(item,-1)"> - </span>
+	<input type="text"  disabled v-model="item.productQuentity">
+	<span @click="changenum(item,+1)"> + </span> <span>{{item.productPrice*item.productQuentity | money('yuan')}}</span>
+	<span @click="deleconfirm">删除</span>
+</div>
+<div :class="{'zhezhao':onff}"></div>
+<div class="wrap" :class="{'show':onff}" >
+
+	<span @click="deleproduct">确认</span>
+	<span @click="onff=false">取消</span>
+</div>
+<span :class="{'red':checkedAll}" @click="checkedAllF(true)">全选</span>
+<span  @click="checkedAllF(false)">取消全选</span>
+<span>总金额：{{totalMoney | formatMoney}}</span>
+<span>支付</span>
+</div>
+	
+</body>
+<script type="text/javascript" src='js/vue.js'></script>
+<script type="text/javascript" src='js/index.js'></script>
+</html>

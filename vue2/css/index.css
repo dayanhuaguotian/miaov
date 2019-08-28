@@ -1,0 +1,51 @@
+body{margin: 0;font-size: 16px;}
+h2,h3,ul,p{margin: 0}
+ul{padding: 0;list-style: none}
+.clear { zoom:1; }
+.clear:after { content:''; display:block; clear:both; }
+.show{display: block}
+.hiden{display: none;}
+p{font-size: 12px; color: #acb1b7;}
+
+header {color: #fff;display: -webkit-flex;display: flex;justify-content:space-between;padding: 0 3%;align-items:center;background: #333;}
+header span:nth-of-type(2){font-size: 25px;}
+header img{position: relative; top: 3px}
+
+
+.pic{height: 210px;width: 375px;color:red;position: relative;}
+.pic img{width: 100%;border: none;}
+#user{position: absolute;bottom:16px;right:16px;color: #fff;text-shadow: 1px 1px rgba(0,0,0,0.7);display: flex;align-items:center;}
+#user span{}
+#user img{width: 48px;height: 48px;border-radius: 4px;border: 1px solid #fff;margin-left: 12px;}
+#red-spot{width: 10px;height: 10px;background: red;position:absolute;right: -5px;top: -5px;border-radius: 50% }
+
+.message{background: #fff;color:#4145D;padding: 16px;border-bottom: 1px solid #ccc;}
+aside img,article img{width: 40px;height: 40px;}
+.message aside{float: left;}
+.message main{margin-left: 48px;}
+main h2{font-size: 15px;}
+main p{margin-top: 8px;}
+main p:hover{cursor: pointer;}
+.publish h3{font-size: 14px;font-weight: normal;margin-top: 2px;}
+.publish span{width: 50px;display: inline-block;font-size: 12px;color: #808558c;background: no-repeat;padding-left: 21px;margin-top: 12px;}
+.publish span:nth-of-type(1){background: url(../img/state-thumbs-up.svg)no-repeat 0 -1px;}
+.publish span:nth-of-type(2){background: url(../img/state-comment.svg)no-repeat ;}
+.publish span:nth-of-type(3){background: url(../img/state-delete.svg)no-repeat ;}
+.publish .time{ color:#acb1b7; margin:12px 0 4px 0;font-size: 12px;font-weight: normal}
+article{margin-top:8px;height: 52px;background: #f7f7f7;display: -webkit-flex;display: flex;align-items:center;}
+article img{margin:6px;flex-shrink:0;}
+main article h3{font-size: 13px;margin-top: 0}
+.share-photo{margin-top: 4px;}
+.share-photo li{float: left;margin-top: 4px;margin-right: 4px;}
+.share-photo img{display: block;}
+
+.comment{font-size: 14px;color: #41454d;}
+.comment li{margin-top: 4px;}
+/*.comment li:nth-of-type(1){display: block;}
+.comment li:nth-of-type(2){display: block;}
+.comment li:nth-of-type(3){display: block;}*/
+.user{color:#5bafff; }
+main p img{margin-left: 4px;}
+
+footer{padding: 12px 0 16px 0}
+footer p{display: inline-block;position: relative;left: 50%;top :0;transform: translate(-50%, 0);}

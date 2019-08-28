@@ -1,0 +1,39 @@
+body,h2,ul,p{margin: 0}
+h2{font-weight: normal;}
+ul{padding: 0;list-style: none;}
+html,body{height: 100%}
+
+input{width: 30px;text-align: center;}
+span:hover{cursor: pointer;}
+.clear { zoom:1; }
+.clear:after { content:''; display:block; clear:both; }
+.red{color: red}
+.left{float: left;}
+.right{float: right;}
+.wrap{width: 300px;height: 200px;border: 1px solid #FFF;text-align: center;line-height: 100px;z-index: 1001;background: #fff;position: absolute;left: 50%;margin-left: -150px;top: 20%;display: none;}
+.show{display: block;}
+.zhezhao{width: 100%;height: 100%;background: #eee;z-index: 100;position: absolute;top: 0;left: 0;opacity: 0.6}
+.textcent{text-align: center;}
+.linheight{line-height: 150px;}
+.red{color: red}
+
+header{padding:20px;}
+header h2{text-align:center;letter-spacing:30px;margin: 10px;}
+header p{background: #eee;font-size: 20px;height: 40px;line-height: 40px}
+header p span{display: inline-block;text-align:center;}
+header p span{width: 15%}
+.width4{width: 40%;}
+.width15{width: 15%}
+
+main {padding:20px;}
+.check{width: 20px;height:20px;display: inline-block;background-image: url(../img/pic.png) ;background-position: -25px -32px;}
+/*选中时状态改变*/
+.active{background-position: -60px -32px;}
+li{margin-bottom: 20px;}
+li img{width: 150px;height: 150px;margin:0 20px;}
+li h2{margin-bottom: 50px;}
+li div input{width: 20px;height: 20px;line-height: 150px;}
+li div span{color: #666;}
+footer{padding:20px;}
+footer p{background: #eee;font-size: 20px;height: 40px;line-height: 40px}
+#pay{background: red;display: inline-block;padding: 0 10px;}

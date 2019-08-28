@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>车友圈</title>
+	<meta name="viewport" content="width=375,user-scalable=no" />
+	<link href="css/index.css" rel="stylesheet"/>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/vue.js"></script>	
+	<script src="js/index.js"></script>	
+</head>
+<body >
+	<header>
+		<span>发现</span><span>车友圈</span><span><img src="img/friendcircle-camera.svg" alt=""></span>
+	</header>
+	<main id="app">
+		<section  class="pic">
+			<img :src="list[0].backpic" alt="">
+			<div id="user">
+				<span>{{list[0].user}}</span>
+				<img :src="list[0].headpic">
+				<span id="red-spot"></span>
+			</div>
+		</section>
+		<section class="message" v-for="(item,index) in list[1]">
+		
+			<aside>
+				<img :src="item.photo" alt="">
+			</aside>		
+			<main>
+				<h2>{{item.name}}</h2>
+				<div class="publish">
+					<h3>{{item.text}}</h3>
+					<!--文章分享 如果有数据则渲染 -->
+					<article v-if="item.article.length">
+						<img :src="item.article[0].pic" alt="">
+						<h3>{{item.article[0].title}}</h3>
+					</article>
+					<!-- 图片分享 如果有则渲染 -->
+					<div class="share-photo" v-if="item.sharepic.length==1">
+						<ul class="clear">
+							<li v-for="sharepic in item.sharepic">
+								<img src="img/user.jpg" alt="" style="width: 172px;height: 172px;">
+							</li>
+						</ul>		
+					</div>
+					<div class="share-photo" v-if="item.sharepic.length==2||item.sharepic.length==4">
+						<ul class="clear">
+							<li v-for="sharepic in item.sharepic">
+								<img src="img/user.jpg" alt="" style="width: 134px;height: 134px;">
+							</li>
+						</ul>		
+					</div>
+					<div class="share-photo" v-if="item.sharepic.length==3||item.sharepic.length>=5">
+						<ul class="clear">
+							<li v-for="sharepic in item.sharepic">
+								<img src="img/user.jpg" alt="" style="width: 88px;height: 88px;">
+							</li>
+						</ul>		
+					</div>
+					<!-- 是作者才有删除 -->
+					<span @click="love(index)">{{item.love}}</span>
+					<span @click="addtodo">评论</span>
+					<span @click="todo(index)" v-if="list[0].user==item.name">删除</span><br/>
+					<strong class="time">{{item.time}}</strong>
+				</div>
+				<div class="comment">
+					<ul>
+						<li v-for="comment in item.comment" v-if="comment.name1" :class="{show:comment.show=='true',hiden:comment.show=='false'}">
+							<span class="user" >{{comment.name1}}</span> 回复 <span class="user">{{comment.name2}}</span>: <span>{{comment.text}}</span>
+						</li>
+						<li v-for="comment in item.comment" v-if="comment.name" :class="{show:comment.show=='true',hiden:comment.show=='false'}">
+							<span class="user">{{comment.name}}</span><span>: {{comment.text}}</span>
+						</li>
+					</ul>
+				</div>
+				<p @click="show(index)" v-if="item.off">查看全部 {{item.comment.length}} 条评论<img src="img/comment-downarrow.svg" alt=""  >
+				</p>
+				<p  @click="show(index)" v-if="!item.off">收起 <img src="img/comment-uparrow.svg" alt=""></p>
+			</main>
+		</section>
+	</main>	
+	<footer><p>以显示全部内容</p></footer>
+</body>
+</html>

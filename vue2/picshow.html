@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>车友圈</title>
+	<style>
+	html,body{background: #333;margin: 0}
+	img{margin-top:10%;}
+	</style>
+</head>
+<body>
+	<img id='img' src="" alt="">
+	<script type="text/javascript">
+		var img= document.getElementById("img");
+	    var sitename = localStorage.getItem('sitename'); 
+	    img.src = sitename;
+	</script>
+</body>
+</html>
