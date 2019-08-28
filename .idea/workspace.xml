@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="257b45a2-578e-4f3a-830c-05dc12067a17" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="257b45a2-578e-4f3a-830c-05dc12067a17" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,12 +18,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="1" />
+          <entry key="html" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="1" />
+          <entry key="HTML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -42,13 +40,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="271" column="49" lean-forward="true" selection-start-line="271" selection-start-column="49" selection-end-line="271" selection-end-column="49" />
+            <state relative-caret-position="3198">
+              <caret line="271" column="49" selection-start-line="271" selection-start-column="49" selection-end-line="271" selection-end-column="49" />
               <folding>
-                <element signature="n#style#0;n#html#0;n#!!top" />
                 <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#ul#0;n#li#1;n#ul#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#ul#0;n#li#2;n#ul#1;n#body#0;n#html#0;n#!!top" />
@@ -68,10 +65,26 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vue/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/index1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1209" />
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/vue" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -80,12 +93,13 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1026" />
     <option name="height" value="546" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -97,6 +111,11 @@
             <path>
               <item name="miaov" type="b2602c69:ProjectViewProjectNode" />
               <item name="miaov" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miaov" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miaov" type="462c0819:PsiDirectoryNode" />
+              <item name="vue" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -138,7 +157,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.002232143" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21056548" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
@@ -160,12 +179,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/css/index1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1209" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="271" column="49" lean-forward="true" selection-start-line="271" selection-start-column="49" selection-end-line="271" selection-end-column="49" />
+        <state relative-caret-position="3198">
+          <caret line="271" column="49" selection-start-line="271" selection-start-column="49" selection-end-line="271" selection-end-column="49" />
           <folding>
-            <element signature="n#style#0;n#html#0;n#!!top" />
             <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#ul#0;n#li#1;n#ul#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#ul#0;n#li#2;n#ul#1;n#body#0;n#html#0;n#!!top" />
@@ -181,6 +204,13 @@
             <element signature="n#ul#0;n#li#1;n#ul#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#ul#0;n#li#3;n#ul#2;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
         </state>
       </provider>
     </entry>
