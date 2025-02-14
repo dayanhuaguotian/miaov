@@ -3,8 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <title>彤彤爱你</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ff69b4, #87ceeb);
+            color: #fff;
+            font-family: 'Pacifico', cursive;
+            text-align: center;
+            padding: 50px;
+            position: relative;
+        }
+        .love-message {
+            font-size: 24px;
+            line-height: 1.6;
+        }
+        /* 绘制花 */
+        .flower {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #ff00ff 20%, #ff69b4 100%);
+            border-radius: 50%;
+            animation: flower-fall 5s linear infinite;
+        }
+        @keyframes flower-fall {
+            0% {
+                top: -20px;
+            }
+            100% {
+                top: 100vh;
+            }
+        }
+        /* 绘制烟花 */
+        .firework {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+            animation: firework-burst 1s ease-out infinite;
+        }
+        @keyframes firework-burst {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(15);
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-
+<!-- 背景音乐 -->
+<audio autoplay loop>
+    <source src="your_music_file.mp3" type="audio/mpeg">
+    你的浏览器不支持音频播放。
+</audio>
+<!-- 花 -->
+<div class="flower" style="left: 10%;"></div>
+<div class="flower" style="left: 20%;"></div>
+<div class="flower" style="left: 30%;"></div>
+<div class="flower" style="left: 40%;"></div>
+<div class="flower" style="left: 50%;"></div>
+<div class="flower" style="left: 60%;"></div>
+<div class="flower" style="left: 70%;"></div>
+<div class="flower" style="left: 80%;"></div>
+<div class="flower" style="left: 90%;"></div>
+<!-- 烟花 -->
+<div class="firework" style="left: 15%; top: 20%;"></div>
+<div class="firework" style="left: 35%; top: 30%;"></div>
+<div class="firework" style="left: 55%; top: 40%;"></div>
+<div class="firework" style="left: 75%; top: 50%;"></div>
+<!-- 烟花效果 -->
+<div id="fireworks"></div>
+<!-- 表白内容 -->
+<div class="love-message">
+    <p>亲爱的老婆：</p>
+    <p>在这浪漫情人节，我电脑前独坐，满心是你。自网络邂逅，你点亮我生活。屏幕文字似你温柔低语，撩动我心。</p>
+    <p>虽未现实相拥，你照片已刻我心。你微笑眼神，如春日暖阳，让我沉醉。与你聊天如漫步云端，惬意非常。你善解人意，察觉我情绪，贴心话语安慰鼓励，是我疲惫生活的依靠。</p>
+    <p>我无数次幻想，拥你入怀，诉我思念。</p>
+    <p>未来，我愿陪你走过四季，一直在你身边。亲爱的，情人节快乐，愿早日相见。</p>
+    <p>爱你的老公</p>
+</div>
+<!-- 引入烟花效果的 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@1.0.1/dist/fireworks.min.js"></script>
+<script>
+    const fireworks = new Fireworks.default(document.getElementById('fireworks'));
+    fireworks.start();
+</script>
 </body>
+
 </html>
