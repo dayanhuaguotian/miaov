@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <title>彤彤爱你</title>
     <style>
+        #playButton {
+            position: fixed; /* 使用固定定位 */
+            left: 20px; /* 距离页面左边 20px */
+            top: 20px; /* 距离页面顶部 20px */
+            z-index: 1000;
+            padding: 10px 20px;
+            background-color: transparent; /* 背景透明 */
+            color: white;
+            border: 1px solid white; /* 添加白色边框 */
+            border-radius: 5px;
+            cursor: pointer;
+        }
         body {
             background: linear-gradient(to bottom, #ff69b4, #87ceeb);
             color: #fff;
@@ -11,21 +23,48 @@
             text-align: center;
             padding: 50px;
             position: relative;
+
+
+            margin: 0;
+            overflow: hidden;
+            /* 添加背景图片 */
+            background-image: url('https://5b0988e595225.cdn.sohucs.com/images/20181125/a3fa48bd088440c6880ba05a0c4a2732.jpeg');
+            background-size: cover; /* 让背景图片覆盖整个页面 */
+            background-position: center; /* 背景图片居中显示 */
+
         }
         .love-message {
             font-size: 24px;
             line-height: 1.6;
         }
-        /* 绘制花 */
-        .flower {
+        /* 绘制爱心 */
+        .heart {
             position: absolute;
             width: 20px;
             height: 20px;
-            background: radial-gradient(circle, #ff00ff 20%, #ff69b4 100%);
-            border-radius: 50%;
-            animation: flower-fall 5s linear infinite;
+            background: rgba(255, 105, 180, 0.4);/* 调整爱心颜色 */
+            transform: rotate(-45deg);
+            animation: heart-fall 150s linear infinite;
+            z-index: 1; /* 设置 z-index 确保爱心显示在其他元素之上 */
         }
-        @keyframes flower-fall {
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 105, 180, 0.4);/* 调整爱心颜色 */
+            border-radius: 50%;
+        }
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+        .heart::after {
+            left: 10px;
+            top: 0;
+        }
+        @keyframes heart-fall {
             0% {
                 top: -20px;
             }
@@ -56,20 +95,13 @@
 </head>
 <body>
 <!-- 背景音乐 -->
-<audio autoplay loop>
-    <source src="your_music_file.mp3" type="audio/mpeg">
-    你的浏览器不支持音频播放。
+<audio id="myAudio">
+    <source src="YirumaRiverFlowsinYou.mp3" type="audio/mpeg">
+    您的浏览器不支持 audio 元素。
 </audio>
-<!-- 花 -->
-<div class="flower" style="left: 10%;"></div>
-<div class="flower" style="left: 20%;"></div>
-<div class="flower" style="left: 30%;"></div>
-<div class="flower" style="left: 40%;"></div>
-<div class="flower" style="left: 50%;"></div>
-<div class="flower" style="left: 60%;"></div>
-<div class="flower" style="left: 70%;"></div>
-<div class="flower" style="left: 80%;"></div>
-<div class="flower" style="left: 90%;"></div>
+<button id="playButton">播放/暂停 背景音乐</button>
+
+
 <!-- 烟花 -->
 <div class="firework" style="left: 15%; top: 20%;"></div>
 <div class="firework" style="left: 35%; top: 30%;"></div>
@@ -89,8 +121,44 @@
 <!-- 引入烟花效果的 JavaScript 文件 -->
 <script src="https://cdn.jsdelivr.net/npm/fireworks-js@1.0.1/dist/fireworks.min.js"></script>
 <script>
-    const fireworks = new Fireworks.default(document.getElementById('fireworks'));
+    // 生成指定数量的随机爱心
+    function generateRandomHearts(count) {
+        for (let i = 0; i < count; i++) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            // 随机设置爱心的初始水平位置
+            heart.style.left = Math.random() * 100 + '%';
+            // 随机设置动画持续时间
+            heart.style.animationDuration = (Math.random() * 5 + 3) + 's';
+            document.body.appendChild(heart);
+        }
+    }
+
+    // 生成 20 个随机爱心
+    generateRandomHearts(20);
+    // 修改此处，去掉 .default
+    const fireworks = new Fireworks(document.getElementById('fireworks'));
     fireworks.start();
+
+
+    const audio = document.getElementById('myAudio');
+    const playButton = document.getElementById('playButton');
+
+    // 页面加载完成后自动播放音频
+    window.addEventListener('load', function() {
+        audio.play().catch(error => {
+            alert('自动播放失败:');
+        });
+    });
+
+    playButton.addEventListener('click', function() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
 </script>
 </body>
 
