@@ -165,6 +165,16 @@
                 opacity: 0;
             }
         }
+        .title-container {
+            text-align: center;
+            background: linear-gradient(to right, rgba(255, 105, 180, 0), #ff69b4, #87ceeb, rgba(135, 206, 235, 0));
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .title-container h1 {
+            font-size: 60px;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -184,6 +194,9 @@
 <!-- 烟花效果 -->
 <div id="fireworks"></div>
 <!-- 表白内容 -->
+<div class="title-container">
+    <h1>2025 02 14</h1>
+</div>
 <div class="love-message">
     <p>彤彤老婆：</p>
     <p>在这浪漫情人节，我电脑前独坐，满心是你。自网络邂逅，你点亮我生活。屏幕文字似你温柔低语，撩动我心。</p>
@@ -196,6 +209,35 @@
     <img src="pic/130525486.jpg" alt="Image 1" style="transform: rotate(-10deg); margin-right: 20px;max-width: 700px; max-height: 700px;">
 
     <img src="pic/1777752328.jpg" alt="Image 2" style="transform: rotate(10deg); max-width: 700px; max-height: 700px;">
+</div>
+
+<div class="title-container">
+    <h1>2025 01 26</h1>
+</div>
+<div class="love-message">
+    <p>雪后的清晨，我在雪地一遍又一遍写下对你的爱意，起初木棍，最后用手指，直至指尖冻僵，爱意却滚烫。</p>
+</div>
+<div class="tilted-images" style="margin-top: 200px;">
+    <img src="pic/1923696807.jpg" alt="Image 1" style="transform: rotate(-10deg); margin-right: 20px;max-width: 700px; max-height: 700px;">
+</div>
+
+
+<div class="title-container">
+    <h1>2025 01 25</h1>
+</div>
+<div class="love-message">
+    <p>清晨的微光还未完全驱散夜色，我就迫不及待起身，反反复复，每一笔都是情深难藏 </p>
+</div>
+<div class="tilted-images" style="margin-top: 200px;">
+    <img src="pic/1218149137.jpg" alt="Image 1" style="transform: rotate(-10deg); margin-right: 20px;max-width: 700px; max-height: 700px;">
+</div>
+
+
+<div class="title-container">
+    <h1>2024 10 14</h1>
+</div>
+<div class="love-message">
+    <p>咱们首次在网络上相识</p>
 </div>
 <!-- 引入烟花效果的 JavaScript 文件 -->
 <script src="https://cdn.jsdelivr.net/npm/fireworks-js@1.0.1/dist/fireworks.min.js"></script>
@@ -224,13 +266,13 @@
     const playButton = document.getElementById('playButton');
 
     // 页面加载完成后自动播放音频
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         audio.play().catch(error => {
             alert('自动播放失败:');
         });
     });
 
-    playButton.addEventListener('click', function() {
+    playButton.addEventListener('click', function () {
         if (audio.paused) {
             audio.play();
         } else {
