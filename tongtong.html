@@ -18,6 +18,50 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* 第一张图片的动画 */
+        .tilted-images img:nth-child(1) {
+            opacity: 0;
+            -webkit-animation: fadeIn 15s ease-in-out 15s forwards;
+            animation: fadeIn 15s ease-in-out 15s forwards;
+        }
+        /* 第二张图片的动画，延迟时间增加 */
+        .tilted-images img:nth-child(2) {
+            opacity: 0;
+            -webkit-animation: fadeIn 15s ease-in-out 30s forwards;
+            animation: fadeIn 15s ease-in-out 30s forwards;
+        }
+        .love-message p {
+            opacity: 0;
+            animation: fadeIn 6s ease-in-out forwards; /* 假设文字渐入时间为 6 秒，可根据实际调整 */
+        }
+        /* 为每个段落设置不同的延迟，模拟逐行渐入 */
+        .love-message p:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .love-message p:nth-child(2) {
+            animation-delay: 2s;
+        }
+        .love-message p:nth-child(3) {
+            animation-delay: 4s;
+        }
+        .love-message p:nth-child(4) {
+            animation-delay: 6s;
+        }
+        .love-message p:nth-child(5) {
+            animation-delay: 8s;
+        }
+        .love-message p:nth-child(6) {
+            animation-delay: 10s;
+        }
         .big-heart {
             position: fixed;
             top: 50%;
