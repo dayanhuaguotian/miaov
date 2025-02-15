@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>彤彤爱你</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
         #playButton {
             position: fixed; /* 使用固定定位 */
             left: 20px; /* 距离页面左边 20px */
             top: 20px; /* 距离页面顶部 20px */
             z-index: 1000;
+            font-size: 35px;
             padding: 10px 20px;
             background-color: transparent; /* 背景透明 */
             color: white;
@@ -16,17 +18,45 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .big-heart {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 800px;
+            background: rgba(255, 105, 180, 0.3); /* 设置爱心颜色和透明度 */
+            transform: translate(-50%, -50%) rotate(-45deg);
+            z-index: 2; /* 设置 z-index 确保爱心显示在其他元素之上 */
+        }
+        .big-heart::before,
+        .big-heart::after {
+            content: "";
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: rgba(255, 105, 180, 0.1); /* 设置爱心颜色和透明度 */
+            border-radius: 50%;
+        }
+        .big-heart::before {
+            top: -400px;
+            left: 0;
+        }
+        .big-heart::after {
+            left:400px;
+            top: 0;
+        }
         body {
             background: linear-gradient(to bottom, #ff69b4, #87ceeb);
             color: #fff;
-            font-family: 'Pacifico', cursive;
             text-align: center;
             padding: 50px;
             position: relative;
 
+            font-family: 'Dancing Script', cursive;
+
 
             margin: 0;
-            overflow: hidden;
+
             /* 添加背景图片 */
             background-image: url('https://5b0988e595225.cdn.sohucs.com/images/20181125/a3fa48bd088440c6880ba05a0c4a2732.jpeg');
             background-size: cover; /* 让背景图片覆盖整个页面 */
@@ -34,7 +64,7 @@
 
         }
         .love-message {
-            font-size: 24px;
+            font-size: 35px;
             line-height: 1.6;
         }
         /* 绘制爱心 */
@@ -101,7 +131,7 @@
 </audio>
 <button id="playButton">播放/暂停 背景音乐</button>
 
-
+<div class="big-heart"></div>
 <!-- 烟花 -->
 <div class="firework" style="left: 15%; top: 20%;"></div>
 <div class="firework" style="left: 35%; top: 30%;"></div>
@@ -111,12 +141,17 @@
 <div id="fireworks"></div>
 <!-- 表白内容 -->
 <div class="love-message">
-    <p>亲爱的老婆：</p>
+    <p>彤彤老婆：</p>
     <p>在这浪漫情人节，我电脑前独坐，满心是你。自网络邂逅，你点亮我生活。屏幕文字似你温柔低语，撩动我心。</p>
     <p>虽未现实相拥，你照片已刻我心。你微笑眼神，如春日暖阳，让我沉醉。与你聊天如漫步云端，惬意非常。你善解人意，察觉我情绪，贴心话语安慰鼓励，是我疲惫生活的依靠。</p>
     <p>我无数次幻想，拥你入怀，诉我思念。</p>
     <p>未来，我愿陪你走过四季，一直在你身边。亲爱的，情人节快乐，愿早日相见。</p>
     <p>爱你的老公</p>
+</div>
+<div class="tilted-images" style="margin-top: 200px;">
+    <img src="pic/130525486.jpg" alt="Image 1" style="transform: rotate(-10deg); margin-right: 20px;max-width: 700px; max-height: 700px;">
+
+    <img src="pic/1777752328.jpg" alt="Image 2" style="transform: rotate(10deg); max-width: 700px; max-height: 700px;">
 </div>
 <!-- 引入烟花效果的 JavaScript 文件 -->
 <script src="https://cdn.jsdelivr.net/npm/fireworks-js@1.0.1/dist/fireworks.min.js"></script>
